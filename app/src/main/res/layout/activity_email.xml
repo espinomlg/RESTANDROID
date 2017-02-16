@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="paco.portada@gmail.com" >
+        android:text="espinomlg@gmail.com" >
         <requestFocus />
     </EditText>
     <TextView
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="paco.portada@gmail.com" />
+        android:text="espinomlg@gmail.com" />
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"

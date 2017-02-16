@@ -114,7 +114,16 @@ public class EmailActivity extends AppCompatActivity implements View.OnClickList
                     message = "Null data";
                 Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
-// on Failure
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                progreso.dismiss();
+                Toast.makeText(getApplicationContext(), "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                progreso.dismiss();
+                Toast.makeText(getApplicationContext(), "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

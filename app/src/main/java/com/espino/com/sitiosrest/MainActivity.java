@@ -96,11 +96,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             }
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Toast.makeText(getApplicationContext(), "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                progreso.dismiss();
+                Toast.makeText(getApplicationContext(), "Error: " + throwable.getCause() + throwable.getMessage(), Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Toast.makeText(getApplicationContext(), "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                progreso.dismiss();
+                Toast.makeText(getApplicationContext(), "Error: " + throwable.getCause() + throwable.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
